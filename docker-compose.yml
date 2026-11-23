@@ -1,0 +1,23 @@
+# La base de datos es el PostgreSQL instalado en Windows (puerto 5432, BD "interfaces"),
+# el mismo que ves en pgAdmin. Desde los contenedores se llega a tu PC con host.docker.internal.
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      PORT: "8080"
+      DATABASE_URL: ${DATABASE_URL:?Define DATABASE_URL en .env}
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET en .env}
+      COOKIE_SECURE: "false"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"

@@ -1,0 +1,17 @@
+# Secretos
+.env
+
+# Backend
+backend/.env
+backend/*.exe
+backend/tmp/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
