@@ -3,7 +3,7 @@ import { icons } from './iconPaths'
 import { Icon } from './icons'
 
 // Nombre provisional de la materia; luego vendrá de la configuración del profesor.
-export const SUBJECT_NAME = 'Aula Virtual'
+export const SUBJECT_NAME = 'Lenguajes de Programación'
 
 export default function Logo({ to = '/', light = false }: { to?: string; light?: boolean }) {
   return (

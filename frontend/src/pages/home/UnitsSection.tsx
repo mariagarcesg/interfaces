@@ -22,7 +22,9 @@ export default function UnitsSection() {
           <div>
             <SectionBadge>Contenido</SectionBadge>
             <h2 className="mt-5 text-4xl text-text sm:text-5xl">Unidades de la materia</h2>
-            <p className="mt-3 text-text/75">Un recorrido organizado desde los fundamentos hasta el proyecto final.</p>
+            <p className="mt-3 text-text/90">
+              Un recorrido desde la historia de los lenguajes hasta su implementación.
+            </p>
           </div>
           <div className="flex gap-3">
             {([-1, 1] as const).map((dir) => (
@@ -33,7 +35,7 @@ export default function UnitsSection() {
                 aria-label={dir === -1 ? 'Anterior' : 'Siguiente'}
                 className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
                   dir === 1
-                    ? 'bg-primary text-white hover:bg-primary-hover'
+                    ? 'bg-primary text-on-primary hover:bg-primary-hover'
                     : 'border border-border bg-surface text-text hover:bg-background'
                 }`}
               >
@@ -58,6 +60,7 @@ export default function UnitsSection() {
               <div className="flex items-end justify-between gap-3 px-2 pt-4 pb-2">
                 <div>
                   <h3 className="font-body text-base font-semibold text-text">{u.title}</h3>
+                  <p className="mt-1 line-clamp-2 text-sm text-muted">{u.description}</p>
                   <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
                     <span className="inline-flex items-center gap-1">
                       <Icon d={icons.layers} className="h-3.5 w-3.5" /> {u.topics} temas
@@ -73,7 +76,7 @@ export default function UnitsSection() {
                 <Link
                   to="/registro"
                   aria-label={`Ver ${u.title}`}
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-white transition-colors hover:bg-primary-hover"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary transition-colors hover:bg-primary-hover"
                 >
                   <Icon d={icons.arrowUpRight} className="h-4 w-4" />
                 </Link>

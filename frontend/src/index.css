@@ -6,16 +6,21 @@
   solo tendrá que sobrescribir estas variables CSS.
 */
 @theme {
-  --color-primary: #1f3a2e;
-  --color-primary-hover: #152a21;
-  --color-primary-soft: #e4ece6;
-  --color-secondary: #7a8f6a;
-  --color-background: #f6f1ea;
-  --color-surface: #ffffff;
-  --color-text: #1b1d1a;
-  --color-muted: #6b6a62;
-  --color-border: #e6ddd1;
-  --color-accent: #e2a03f;
+  /* Paleta de la materia */
+  --color-background: #6d99a7; /* fondo: azul pizarra */
+  --color-primary: #fca851; /* principal: naranja (botones / CTA) */
+  --color-primary-hover: #fccf51; /* amarillo al pasar el mouse */
+  --color-on-primary: #08171c; /* texto sobre el naranja */
+  --color-primary-ink: #a8520a; /* naranja oscuro para texto/iconos sobre fondos claros */
+  --color-primary-soft: #ffe7cc;
+  --color-secondary: #50d1fd; /* celeste */
+  --color-accent: #51fcc9; /* menta */
+  --color-highlight: #fccf51; /* amarillo */
+
+  --color-surface: #f7fbfc;
+  --color-text: #08171c;
+  --color-muted: #3d5964;
+  --color-border: #cfe1e7;
   --color-danger: #b42318;
   --color-danger-soft: #fef3f2;
 

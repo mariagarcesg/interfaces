@@ -58,7 +58,7 @@ export default function DashboardLayout() {
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 `block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive ? 'bg-primary-soft text-primary' : 'text-muted hover:bg-background hover:text-text'
+                  isActive ? 'bg-primary-soft text-primary-ink' : 'text-muted hover:bg-background hover:text-text'
                 }`
               }
             >
@@ -94,7 +94,7 @@ export default function DashboardLayout() {
               </p>
               <p className="text-xs text-muted">{ROLE_LABEL[user.role]}</p>
             </div>
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary">
               {initials}
             </div>
           </div>
